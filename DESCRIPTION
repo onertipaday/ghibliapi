@@ -1,0 +1,19 @@
+Package: ghibliapi
+Type: Package
+Title: Provides an R interface to Studio Ghibli API 
+Version: 0.0.1
+Authors@R: person("Paolo", "Sonego", email = "paolo.sonego@gmail.com", role = c("aut", "cre"))
+Maintainer: Paolo Sonego <paolo.sonego@gmail.com>
+Description: Provides an R interface to Studio Ghibli API <https://ghibliapi.herokuapp.com>.
+License: GPL-2
+Depends: 
+  R (>= 3.0.0)
+Imports: 
+  httr
+Suggests: tidyverse
+Repository: CRAN
+URL: https://github.com/onertipaday/ghibliapi
+RoxygenNote: 6.0.1
+Encoding: UTF-8
+NeedsCompilation: no
+LazyLoad: yes
