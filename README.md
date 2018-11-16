@@ -1,8 +1,12 @@
 # ghibliapi
 
-> R wrapper for the Ghibli API
+R wrapper for the Ghibli API
 
 This package provides access to the [Ghibli](https://ghibliapi.herokuapp.com) API from R.
+
+## Build Status
+
+[![Travis-CI Build Status](https://travis-ci.org/onertipaday/ghibliapi.svg?branch=master)](https://travis-ci.org/onertipaday/ghibliapi)
 
 ## Installation
 Installation from github requires the devtools package to be installed.
