@@ -44,15 +44,14 @@ get_ghibli <- function(type = NULL, id = NULL){
 }
 ghibli_films <- function(tmp=tmp, id=NULL){
         if(is.null(id)) {
-        response <- matrix(unlist(tmp, recursive=F), length(tmp), 12, byrow=T)
-        response <- data.frame(id=unlist(response[,1],recursive = F),
-                           title=unlist(response[,2]),
-                           description=unlist(response[,3]),
-                           director=unlist(response[,4]),
-                           producer=unlist(response[,5]),
-                           release_date=unlist(response[,6]),
-                           rt_score=as.numeric(unlist(response[,7])),
-                           stringsAsFactors = F)
+          response <-
+            tmp %>%
+            tibble::tibble() %>%
+            tidyr::unnest_wider(1) %>%
+            tidyr::unnest_wider(people, names_sep = "_") %>%
+            tidyr::unnest_wider(species, names_sep = "_") %>%
+            tidyr::unnest_wider(locations, names_sep = "_") %>%
+            tidyr::unnest_wider(vehicles, names_sep = "_")
         } else {
             response <- unlist(tmp, recursive=F)
     }
@@ -60,14 +59,11 @@ ghibli_films <- function(tmp=tmp, id=NULL){
 }
 ghibli_people <- function(tmp=tmp, id=NULL){
     if(is.null(id)) {
-      response <- matrix(unlist(tmp, recursive=F), length(tmp), 8, byrow=T)
-      response <- data.frame(id=unlist(response[,1],recursive = F),
-                             name=unlist(response[,2]),
-                             gender=unlist(response[,3]),
-                             age=unlist(response[,4]),
-                             eye_color=unlist(response[,5]),
-                             hair_color=unlist(response[,6]),
-                             stringsAsFactors = F)
+      response <-
+        tmp %>%
+        tibble::tibble() %>%
+        tidyr::unnest_wider(1) %>%
+        tidyr::unnest_wider(films, names_sep = "_")
       } else {
         response <- unlist(tmp, recursive=F)
         }
