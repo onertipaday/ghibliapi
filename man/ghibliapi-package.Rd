@@ -6,5 +6,5 @@
 \alias{ghibliapi}
 \title{R wrapper for the Ghibli API}
 \description{
-This package provides access to the \href{https://ghibliapi.herokuapp.com}{Ghibli} API from R.
+This package provides access to the \href{https://ghibliapi.vercel.app}{Ghibli} API from R.
 }
