@@ -4,7 +4,7 @@ Title: Provides an R interface to Studio Ghibli API
 Version: 0.0.1
 Authors@R: person("Paolo", "Sonego", email = "paolo.sonego@gmail.com", role = c("aut", "cre"))
 Maintainer: Paolo Sonego <paolo.sonego@gmail.com>
-Description: Provides an R interface to Studio Ghibli API <https://ghibliapi.herokuapp.com>.
+Description: Provides an R interface to Studio Ghibli API <https://ghibliapi.vercel.app>.
 License: GPL-2
 Depends: 
   R (>= 3.0.0)
