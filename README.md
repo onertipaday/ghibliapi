@@ -2,7 +2,7 @@
 
 R wrapper for the Ghibli API
 
-This package provides access to the [Ghibli](https://ghibliapi.herokuapp.com) API from R.
+This package provides access to the [Ghibli](https://ghibliapi.vercel.app) API from R.
 
 ## Build Status
 
@@ -24,7 +24,7 @@ filter(name=="Cat") %>%
 select(id) %>%
 get_ghibli("species",id=.) -> tmp
 str_detect(tmp,"people") %>% subset(tmp,.) %>%
-str_replace("https://ghibliapi.herokuapp.com/people/","") %>%
+str_replace("https://ghibliapi.vercel.app/people/","") %>%
 map(~ get_ghibli("people",.)) %>%
 {
  tibble(
