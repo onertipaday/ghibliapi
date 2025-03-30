@@ -28,7 +28,7 @@ Retrieve data from the Ghibli API
  select(id) \%>\%
  get_ghibli("species",id=.) \%>\%
  subset(.,str_detect(.,"people")) \%>\%
- str_replace("https://ghibliapi.herokuapp.com/people/","") \%>\%
+ str_replace("https://ghibliapi.vercel.app/people/","") \%>\%
  map(~ get_ghibli("people",.)) \%>\%
  {
   tibble(
@@ -41,5 +41,5 @@ Retrieve data from the Ghibli API
 }
 }
 \references{
-https://ghibliapi.herokuapp.com
+https://ghibliapi.vercel.app
 }
