@@ -1,6 +1,6 @@
 #' R wrapper for the Ghibli API
 #'
-#' This package provides access to the \href{https://ghibliapi.herokuapp.com}{Ghibli} API from R.
+#' This package provides access to the \href{https://ghibliapi.vercel.app}{Ghibli} API from R.
 #'
 #' @docType package
 #' @name ghibliapi-package
