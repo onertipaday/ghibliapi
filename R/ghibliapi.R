@@ -3,7 +3,7 @@
 #' Default to NULL if nothing is provided.
 #' @param id The object index. Default is all unless an id is specified.
 #' @return Either a data.frame (if id is NULL) or a list
-#' @references https://ghibliapi.herokuapp.com
+#' @references https://ghibliapi.vercel.app
 #' @export
 #' @examples
 #'  get_ghibli(type="films")
@@ -15,7 +15,7 @@
 #'  select(id) %>%
 #'  get_ghibli("species",id=.) %>%
 #'  subset(.,str_detect(.,"people")) %>%
-#'  str_replace("https://ghibliapi.herokuapp.com/people/","") %>%
+#'  str_replace("https://ghibliapi.vercel.app/people/","") %>%
 #'  map(~ get_ghibli("people",.)) %>%
 #'  {
 #'   tibble(
